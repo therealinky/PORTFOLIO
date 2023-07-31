@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #aaf0d1;
+    background-image: url("../images/ogbaddie.jpg");
+    margin: 0px 2em 2em;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+hr {
+  width: 50%;
+}
+nav {
+  display: flex;
+  justify-content: end;
+  padding: 1em;
+}
+nav a {
+  color: #ff0a9e;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 1em 2em;
+  transform: rotate(-0.02turn);
+  text-decoration: none;
+}
+h2 {
+  color: #fff;
+  font-size: 1.3em;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 2px rgba(255,10,158,0.95);
+  text-align: center;
+  padding: 2em;
+  font-weight: 500;
+}
+.events {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 40%;
+  align-items: center;
+  padding: 1em 4em;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 40%;
+  align-items: center;
+  font-family: 'Rubik Iso', cursive;
+  color: #fff;
+  font-size: 3.5em;
+  text-shadow: 3px 3px 4px rgba(255,10,158,0.95);
+  padding: .5em;
+}
+.item {
+    padding: 2rem;
+    background-color: rgba(28, 22, 55, 0.7);
+    border: 2px solid #ff0a9e;
+    border-radius: 3px;
+    font-size: 1.2em;
+    font-family: 'Rubik Iso', cursive;
+    font-weight: bold;
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    min-height: 320px;
+    transition: .3s;
+}
+.item:hover {
+  background-color: rgba(255,10,158,0.6);
+  border: 2px solid #fff;
+}
+img { max-width: 200px; height: auto; }
+.container {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 33%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+.quote {
+  margin: 1em -2em;
+  padding: 2em 4em;
+  background-color: rgba(255, 10, 158, 0.8);
+  color: #fff;
+  font-size: 4.5rem;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+.newsletter {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 2em;
+  max-width: 60%;
+}
+.newsletter h3 {
+  font-size: 2em;
+  color: #252237;
+  font-family: 'Rubik Iso', cursive;
+  line-height: 1em;
+}
+.newsletter p {
+  font-size: 1.3rem;
+  font-family: Arial, sans-serif;
+}
+input {
+  padding: 1em 2em;
+  color: #888;
+}
+button {
+  background-color: #ff0a9e;
+  color: #fff;
+  padding: 1.5em 2em;
+  margin: 20px 1em;
+  text-transform: uppercase;
+  border: 0;
+  font-weight: 600;
+  width: 50%;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: -2em;
+  margin-left: -2em;
+  margin-right: -2em;
+  background-color: #231d45;
+  color: #eee;
+  align-items: center;
+  padding: 1em;
+  justify-content: center;
+}
+footer a {
+  color: #eee;
+  font-family: Arial, sans-serif;
+  font-size: .8rem;
+}
+@media (max-width: 767px) {
+  body {
+    margin: 0px 1em 1em;
+  }
+  h2 {
+    padding: 1em;
+  }
+  .quote {
+    font-size: 3rem;
+  }
+  .container {
+    flex: 1 1 50%;
+  }
+  .item {
+    padding: 2rem;
+  }
+  .newsletter {
+    max-width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  body {
+   margin: 0px .5em .5em;
+  }
+  h2 {
+    padding: 0;
+  }
+  .quote {
+    font-size: 2rem;
+  }
+  .container {
+    flex: 1 1 100%;
+    margin: 1rem;
+  }
+  .item {
+    padding: 2rem;
+  }
+  .newsletter {
+    max-width: 100%;
+  }
+}

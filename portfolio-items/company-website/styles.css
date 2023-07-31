@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/* CSS Document */
+/** NEW CSS **/
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  padding: 2%;
+  background-color: #fff;
+}
+footer {
+  display: flex;
+  background-color: #e05d57;
+  color: #fff;
+  justify-content: center;
+  padding: 80px 40px;
+}
+.section {
+  display: flex;
+}
+
+h2 {
+  font-size: 2em;
+  color: #006f8b;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Pacifico', cursive;
+}
+h3 {
+  font-size: 1.2em;
+  font-family: Arial, sans-serif;
+  color: #006f8b;
+}
+p {
+  margin: 0;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  color: #e05d57;
+  font-size: 2.5em;
+  padding: 20px;
+  font-family: 'Pacifico', cursive;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin: 0 10%;
+}
+.navbar li {
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 1.1em;
+  list-style-type: none;
+  font-family: Arial, sans-serif;
+  padding: 20px 30px;
+}
+.navbar a {
+  cursor: pointer;
+  color: #555; 
+  transition: .3s;
+  text-decoration: none;
+  letter-spacing: 0.3pt;
+}
+.navbar li:last-child a{
+  padding: 15px 25px;
+  color: #e05d57;
+  border: 1px solid #e05d57;
+}
+.navbar li:last-child a:hover{
+  padding: 15px 25px;
+  color: #fff;
+  border: 1px solid #e05d57;
+  background-color: #e05d57;
+}
+.navbar a:hover {
+   color: #000; 
+}
+.content {
+  background-color: #f4f4e1;
+  display: flex;
+  flex-direction: column;
+}
+.about {
+  background-color: #006f8b;
+  margin: auto;
+  padding: 20px;
+  color: #fefff6;
+  font-family: Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  text-align: center;
+  max-width: 60%;
+  border-radius: 8px;
+  
+}
+.about img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.about-text {
+  padding: 20px;
+}
+section.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #e05d57;
+  margin: 0;
+  padding: 20px;
+}
+section.menu h2 {
+  color: #fff;
+  width: 100%;
+}
+section.other {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+}
+#shop {
+  display: flex;
+  flex: 1 1 22%;
+  flex-direction: row;
+  padding: 0 0 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#shop h2 {
+  width: 100%;
+}
+#shop div {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  transition: .3s;
+  align-self: stretch;
+  width: 19%;
+}
+#shop img {
+  width: 80%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+#shop div:hover {
+  transform: scale(1.2);
+}
+section.team {
+  display: flex;
+  flex-direction: column;
+}
+#team {
+  display: flex;
+  flex: 1 1 22%;
+  flex-direction: row;
+  padding: 20px 20px 40px;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+#team div {
+  padding: 20px;
+  text-align: center;
+  color: #555;
+  transition: .3s;
+  align-self: stretch;
+  width: 19%;
+}
+#team img {
+  width: 80%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+#signup {
+  background-color: #fff;
+  padding: 50px 100px;
+  border-radius: 12px; 
+}
+#signupinfo {
+  color: #e05d57;
+  font-family: Arial, sans-serif;
+}
+#signupbutton{
+  padding: 15px 25px;
+  color: #fff;
+  border: 1px solid #e05d57;
+  background-color: #e05d57;
+  transition: .3s;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 767px) {
+  .about { max-width: 90%;}
+  #shop div {width: 40%;}
+  #team div {width: 40%;}
+}
+
+@media (max-width: 480px) {
+  .about { max-width: 100%;}
+  #shop div {width: 100%;}
+  #team div {width: 100%;}
+}
