@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Ana Rivas Portfolio</title>
-    <link href="stylesheets/main.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="./js/scripts.js"></script>
 </head>
 <body>
     <header>
@@ -15,16 +19,44 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <section id="form">
+        <div class="container">
+            <form action="action_page.php">
+          
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="">
+          
+              <label for="lname">Email</label>
+              <input type="text" id="lname" name="lastname" placeholder="">
+          
+              <label for="subject">Message</label>
+              <textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+    </section>
+  
     <section>
         <form></form>
     </section>
     
-    <footer>@2023 Ana Rivas. All Rights Reserved.</footer>
+    <footer>@2023 Ana Rivas. All Rights Reserved.<span>
+        <ul>
+            <a href="https://www.facebook.com/disenista" alt="Ana's Facebook" target="_blank"><li><i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </li></a>
+            <a href="https://www.instagram.com/anamari.sugar" alt="Ana's Instagram" target="_blank"><li><i class="fa fa-instagram" aria-hidden="true"></i>
+            </li></a>
+            <a href="https://www.linkedin.com/in/anamrivas/" alt="Ana's LinkedIn" target="_blank"><li><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </li></a>
+        </ul>
+</span></footer>
 </body>
 </html>

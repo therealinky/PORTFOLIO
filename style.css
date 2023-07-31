@@ -1,27 +1,39 @@
-html {
-    padding: 1em 10em;
+body {
+    padding: 1em 2em;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 ::selection {
     background-color: #580083;
     color: #fff;
 }
+h2::selection  {
+    background-color: transparent;
+    color: #fff;
+}
 
 h1 {
     text-align: center;
-    border-bottom: 1px solid #f3f3f3;
     line-height: 2em;
+    letter-spacing: 1em;
+}
+h1 a {
+    color: #000;
+    text-decoration: none;
 }
 nav a {
     color: #000;
+    border-bottom: 1px solid transparent;
     text-transform: uppercase;
     text-decoration: none;
+}
+nav a:hover {
+    border-bottom: 1px solid #000;
 }
 nav li {
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 35px;
+    padding: 10px 50px;
     font-weight: 300;
 }
 
@@ -40,20 +52,349 @@ h2 {
     border-radius: 4px;
     width: 100%;
     display: inline;
+    cursor: pointer;
 }
 p {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.5em;
     font-weight: 300;
 }
 .outlined-block {
-    border: 2px solid #000;
+    border: 4px solid #000;
     border-radius: 4px;
-    padding: 10px 30px;
-    margin-left: 6em;
-    margin-right: 6em;
-    margin-top: -20px
+    padding: 20px 30px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    max-width: 80%;
 }
 article#about {
-    padding-bottom: 100px;
+    padding-bottom: 80px;
+}
+#projects {
+    padding-bottom: 80px;
+}
+article#projects li {
+    list-style-type: none;
+}
+/* Project Carousel */
+.CSSgal {
+	position: relative;
+	overflow: hidden;
+	height: 100%; /* Or set a fixed height */
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SLIDER */
+
+.CSSgal .slider {
+	height: 100%;
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+	font-size: 1rem;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+
+}
+
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+	position: relative;
+	z-index: 2;
+    bottom: 27.75vh;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+}
+.CSSgal .bullets > a {
+	display: inline-block;
+	width:       auto;
+	height:      30px;
+    font-size: 1em;
+	line-height: 30px;
+    text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	background: rgba(255, 255, 255, 1);
+    border: 4px solid #000;
+    border-radius: 4px;
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+    padding: 5px 15px;
+    font-weight: 700;
+}
+.CSSgal .bullets > a+a {
+    background-color: #000;
+    color: #fff;
+}
+.CSSgal .bullets > a:active {
+    background-color: #000;
+    color: #fff;
+}
+.CSSgal .bullets > a:focus {
+    background-color: #000;
+    color: #fff;
+}
+.CSSgal .bullets > a:hover {
+	background-color: #000;
+    color: #fff;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {background-color: #fff; color: #000}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: #000; color: #fff;}
+#s2:target ~ .bullets >*:nth-child(2) {background: #000; color: #fff;}
+#s3:target ~ .bullets >*:nth-child(3) {background: #000; color: #fff;}
+#s4:target ~ .bullets >*:nth-child(4) {background: #000; color: #fff;}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal{
+	color: #000;	
+	text-align: center;
+    width: 90%;
+}
+.CSSgal img {
+    max-width: 100%;
+    max-height: 552px;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,.5);
+}
+.CSSgal .slider h3 {
+	margin-top: 0;
+	font-weight: 200;
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 3em;
+}
+.CSSgal .slider p {
+	margin-top: 5vh;
+	font-weight: 200;
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 1em;
+    border: 4px solid #000;
+    border-radius: 4px;
+    padding: 40px 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.CSSgal .slider span {
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 2.5em;
+}
+.CSSgal a {
+	border-radius: 50%;
+	margin: 0 3px;
+	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+section {
+    padding: 0 2em;
+}
+/* SKILLS */
+#skills ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    height: 120px;
+    align-items: center;
+    letter-spacing: -0.06em;
+    word-spacing: 0.2em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 200;
+    width: 90%;
+}
+section#skills {
+    padding-bottom: 50px;
+}
+footer {
+    width: 80%;
+    padding: 0 4em;
+}
+footer ul {
+    display: inline-flex;
+    list-style-type: none;
+    align-items: end;
+    justify-content: space-between;
+    width: 58px;
+    float: right;
+    margin: 0;
+}
+footer li {
+    padding: 0 10px;
+}
+.fa-facebook-square:before, i.fa.fa-instagram:before, i.fa.fa-linkedin-square:before {
+    font-size: 1.8em;
+    color: #000;
+}
+
+/* CONTACT FORM */
+section#form {
+    padding-bottom: 80px;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 3px solid #000; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #000;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ .container label {
+    font-size: 1.1em;
+    font-weight: 400;
+ }
+
+@media screen and (max-width: 991px) {
+    body {
+        padding: 1em;
+    }
+    nav ul {
+        display: block;
+        padding: 0 0 60px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }    
+    nav li {
+        padding: 10px 20px;
+        width: 100%;   
+    }
+    h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    p {
+        font-size: .9em;
+        line-height: 1.4em;
+    }
+    section {
+        padding: 0;
+    }
+    #skills ul {
+        display: block;
+        padding: 0;
+    }
+    .CSSgal {
+        width: 100%;
+    }
+    .CSSgal .bullets {
+        bottom: 27.2vh;
+    }
+    .CSSgal .bullets > a {
+        font-size: .8em;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .CSSgal .slider p {
+        margin-top: 10vh;
+        width: 80%;
+    }
+    .CSSgal .slider span {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+    .CSSgal .slider span {
+        font-size: 1em;
+    }
+    .CSSgal .slider p {
+        padding: 20px;
+    }
+    footer {
+        padding: 20px 0;
+    }
+}
+@media screen and (max-width: 480px) {
+    .CSSgal .bullets {
+        bottom: 30vh;
+    }
+    .CSSgal .bullets > a {
+        font-size: .6em;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .CSSgal .slider span {
+        font-size: .9em;
+    }
+    .container {
+        width: 90%;
+       
+    }
 }

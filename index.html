@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Ana Rivas Portfolio</title>
-    <link href="stylesheets/main.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="./js/scripts.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#project">Projects</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -27,11 +28,11 @@
     <section>
         <article id="about">
             <header>
-                <h2>About Me</h2>
+               <h2 onClick="showHideDiv('about-me')">About Me</h2>
             </header>
-            <section>
+            <section id="about-me" style="display:none;"">
               <div class="outlined-block">
-                <p>Hi there! I'm Ana Rivas, a passionate Graphic and Web Designer with a keen eye for creativity and a love for innovative web development. I believe in the power of design to convey emotions, tell stories and create meaningful experiences for users. With a solid foundation in HTML, CSS and Javascript, I strive to bring beautiful designs to life on the digital canvas.</p>
+                <p>Hi there! I'm Ana Maria Rivas, a passionate Graphic and Web Designer with a keen eye for creativity and a love for innovative web development. I believe in the power of design to convey emotions, tell stories and create meaningful experiences for users. With a solid foundation in HTML, CSS and Javascript, I strive to bring beautiful designs to life on the digital canvas.</p>
                 <p>I have over 15 years of experience in the design industry, during which I've had the privilege to work with a diverse range of clients, from small startups to established brands. My journey started with traditional graphic design, but as technology evolved, I immersed myself in the world of web development to combine my passion for aesthetics and functionality.</p>
                 <p> I thrive on challenges and enjoy finding innovative solutions to design and development hurdles. Throughout my career, I have fostered a collaborative approach, working closely with clients, developers, and cross-functional teams to bring ideas to fruition.</p>
               </div>
@@ -40,17 +41,59 @@
         </article>
         <article id="projects">
             <header>
-                <h2>Projects</h2>
+                <h2 onClick="showHideDiv('projects-slider')">Projects</h2>
             </header>
-            <section>
+            <section id="projects-slider" style="display:none;">
+                <div class="CSSgal">
 
-                <ul><li><img src=""><br><div class="description">Company Website</div></li>
-                    <li><img src=""><br><div class="description">Club Website</div></li>
-                    <li><img src=""><br><div class="description">Dasmoto Arts & Crafts</div></li>
-                    <li><img src=""><br><div class="description">Fotomatic</div></li>
-                    <li><img src=""><br><div class="description">Dasmoto Arts & Crafts</div></li>
-                    <li><img src=""><br><div class="description">Tea Company Website</div></li>
-                </ul>
+                    <!-- Don't wrap targets in parent -->
+                    <s id="s1"></s> 
+                    <s id="s2"></s>
+                    <s id="s3"></s>
+                    <s id="s4"></s>
+                  
+                    <div class="slider">
+                      <div>
+                            
+                        <a href="./portfolio-items/club-website/starting/index.html" target="_blank" alt="View Roller Rollers Club Website"> <img src="./images/club-website-thumb.jpg"></a>
+                            <p><span>FLEXBOX <b>CSS</b></span>&nbsp;&nbsp;<span>RESPONSIVE <b>WEBSITE</b></span>
+                                <br><br><a href="./portfolio-items/club-website/starting/index.html" target="_blank" alt="View Roller Rollers Club Website">VIEW LIVE</a></p>
+                          </div>
+                      <div>
+                         
+                        <a href="./portfolio-items/company-website/index.html" target="_blank" alt="View Cherry's Bakery Website"><img src="./images/company-website-thumb.jpg"></a>
+                             <p><span>RESPONSIVE <b>WEBSITE</b></span>&nbsp;&nbsp;<span>& <b>LAYOUT</b></span>
+                                <br><br><a href="./portfolio-items/company-website/index.html" target="_blank" alt="View Cherry's Bakery Website">VIEW LIVE</a></p>
+
+                          </div>
+                    
+                      <div>
+                           
+                        <a href="./portfolio-items/fotomatic/index.html" target="_blank" alt="View Fotomatic Website"><img src="./images/fotomatic-thumb.jpg"></a>
+                              <p><span>RESPONSIVE <b>WEBSITE</b></span>
+                             <br><br><a href="./portfolio-items/fotomatic/index.html" target="_blank" alt="View Fotomatic Website">VIEW LIVE</a></p>
+
+                          </div>
+                       <div>
+                       
+                        <a href="./portfolio-items/tea-company-website/index.html" target="_blank" alt="View Tea Cozy Website"><img src="./images/tea-company-website-thumb.jpg"></a>
+                            <p><span>OPTIMIZED <b>CSS</b></span>
+                                <br><br><a href="./portfolio-items/tea-company-website/index.html" target="_blank" alt="View Tea Cozy Website">VIEW LIVE</a></p>
+
+                        </div>
+                    </div>
+                    
+   
+                  
+                    <div class="bullets">
+                      <a href="#s1">Club Site</a>
+                      <a href="#s2">Company Site</a>
+                      <a href="#s3">Fotomatic Site</a>
+                      <a href="#s4">Tea Company Site</a>
+                    </div>
+                  
+                  </div>
+                
             </section>
         </article>
         
@@ -68,6 +111,15 @@
         </section>
        
     </aside>
-    <footer>@2023 Ana Rivas. All Rights Reserved.</footer>
+    <footer>@2023 Ana Rivas. All Rights Reserved.<span>
+        <ul>
+            <a href="https://www.facebook.com/disenista" alt="Ana's Facebook" target="_blank"><li><i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </li></a>
+            <a href="https://www.instagram.com/anamari.sugar" alt="Ana's Instagram" target="_blank"><li><i class="fa fa-instagram" aria-hidden="true"></i>
+            </li></a>
+            <a href="https://www.linkedin.com/in/anamrivas/" alt="Ana's LinkedIn" target="_blank"><li><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </li></a>
+        </ul>
+</span></footer>
 </body>
 </html>
